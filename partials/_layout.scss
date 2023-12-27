@@ -117,22 +117,24 @@
     img {
         max-width: 570px;
     }
-}
 
-.about-content div {
-    flex: 1;
-
-}
-
-.about-description {
-    h2 {
-        font-size: 38px;
-        margin-bottom: 24px;
+    div {
+        flex: 1;
     }
 
-    p {
-        margin-bottom: 14px;
-        line-height: 150%;
+    .about-description {
+        h2 {
+            font-size: 38px;
+            margin-bottom: 24px;
+        }
+    
+        p {
+            margin-bottom: 14px;
+            line-height: 150%;
+            strong {
+                color: $red-normal;
+            }
+        }
     }
 }
 
@@ -183,7 +185,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-    padding: 0 44px 34px 44px;
+    padding: 14px 44px 34px 44px;
 
     .haircut {
         flex: 1;
