@@ -1,11 +1,11 @@
-<h1 align="center">Welcome to Dev Ficar Bonito Barbershop</h1>
-<h2 align="center">Where Style Meets Innovation!</h2>
+# Welcome to Dev Ficar Bonito Barbershop
+## Where Style Meets Innovation!
 
-## 💡About
+### 💡About
 
 <p>This website was developed exploring simple and cutting-edge front-end techniques.</p>
 
-## 🛠️ Key Features
+### 🛠️ Key Features
 
 <p><img style="width: 25px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" /> <strong>Immersive HTML Composition</strong></p>
 
