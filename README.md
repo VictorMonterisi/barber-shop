@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Dev Ficar Bonito Barbershop 🧔🏻‍♂️</h1>
+<h1 align="center">Welcome to Dev Ficar Bonito Barbershop</h1>
 <h2 align="center">Where Style Meets Innovation!</h2>
 
 ### 💡About
