@@ -1,17 +1,22 @@
 $themes: (
     default: (
-        bg: $primary-normal
+        bg: $primary-normal,
+        bg-image: linear-gradient(to bottom, rgba(6,18,30,0.1), $primary-normal),  url("./assets/bg.svg")
     ),
     light: (
-        bg: $primary-light
+        bg: $primary-light,
+        bg-image: linear-gradient(to bottom, rgba(6,18,30,0.1), $primary-light), url("./assets/bg.svg")
     ),
     dark: (
-        bg: $primary-dark
+        bg: $primary-dark,
+        bg-image: linear-gradient(to bottom, rgba(6,18,30,0.1), $primary-dark), url("./assets/bg.svg")
     )
 );
 
 @each $theme, $settings in $themes {
     html[data-theme='#{$theme}'] {
-        background: map-get($settings, bg);
+        .bg-home::before {
+            background-image: map-get($settings, bg-image);
+        }
     }
 }

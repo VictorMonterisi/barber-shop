@@ -91,7 +91,6 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("assets/bg.svg");
   left: 0;
   top: 0;
   width: 100%;
@@ -335,15 +334,15 @@ i {
     max-width: 64px;
   }
 }
-html[data-theme=default] {
+html[data-theme=default] body {
   background: #06121e;
 }
 
-html[data-theme=light] {
+html[data-theme=light] body {
   background: #0c2135;
 }
 
-html[data-theme=dark] {
+html[data-theme=dark] body {
   background: #040f1a;
 }
 
