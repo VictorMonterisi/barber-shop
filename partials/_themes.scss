@@ -1,0 +1,17 @@
+$themes: (
+    default: (
+        bg: $primary-normal
+    ),
+    light: (
+        bg: $primary-light
+    ),
+    dark: (
+        bg: $primary-dark
+    )
+);
+
+@each $theme, $settings in $themes {
+    html[data-theme='#{$theme}'] {
+        background: map-get($settings, bg);
+    }
+}
