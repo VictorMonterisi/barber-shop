@@ -5,6 +5,12 @@ $themes: (
     ),
     dark: (
         bg: $primary-dark,
+        header-icons: $white-normal,
+        header-icons-hover: $red-light,
+        header-button-border: $white-light,
+        header-button-text: $white-light,
+        header-button-border-hover: $red-light,
+        header-button-bg-hover: $red-light,
         bg-home: linear-gradient(to bottom, $secundary-dark, rgb(253 253 253 / 10%)),
         introduction-text: $white-normal,
         button-contact-bg: $red-normal,
@@ -18,7 +24,10 @@ $themes: (
         haircut-bg: $white-normal,
         haircut-info-bg: $white-normal,
         haircut-info-button-bg: $red-normal,
-        haircut-info-button-text: $white-normal
+        haircut-info-button-text: $white-normal,
+        footer-text: $white-normal,
+        footer-icons: $white-normal,
+        footer-icons-hover: $red-normal
     )
 );
 
@@ -26,6 +35,24 @@ $themes: (
     html[data-theme='#{$theme}'] {
         body {
             background: map-get($settings, bg);
+        }
+        .header-icons {
+            i {
+                color: map-get($settings, header-icons);
+            }
+        }
+        .header-icons a:hover {
+            i {
+                color: map-get($settings, header-icons-hover);
+            }
+        }
+        .header-button {
+            border-color: map-get($settings, header-button-border);
+            color: map-get($settings, header-button-text);
+        }
+        .header-button:hover {
+            border-color: map-get($settings, header-button-border-hover);
+            background: map-get($settings, header-button-bg-hover);
         }
         .bg-home::before {
             background-image: map-get($settings, bg-home);
@@ -56,7 +83,6 @@ $themes: (
                 color: map-get($settings, services-map-strong);
             }
         }
-
         .haircuts {
             .haircut {
                 background: map-get($settings, haircut-bg);
@@ -67,6 +93,15 @@ $themes: (
                         color: map-get($settings, haircut-info-button-text);
                     }
                 }
+            }
+        }
+        .footer {
+            color: map-get($settings, footer-text);
+            .footer-icons i {
+                color: map-get($settings, footer-icons);
+            }
+            .footer-icons a:hover i {
+                color: map-get($settings, footer-icons-hover);
             }
         }
     }

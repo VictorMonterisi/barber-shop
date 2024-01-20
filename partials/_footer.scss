@@ -4,15 +4,18 @@
     align-items: center;
     justify-content: center;
     padding: 54px 0;
-    gap: 24px;
-    color: $white-normal;
+    gap: 24px;  
 
     .footer-icons {
         display: flex;
-        gap: 8px;
-        color: $white-normal;
+        gap: 18px;
     }
     
+    .footer-icons a i {
+        transition: all 0.6s ease-in-out;
+    }
+
+
     .button-whatsapp {
         position: fixed;
         right: 24px;

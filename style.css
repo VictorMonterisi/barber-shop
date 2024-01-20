@@ -15,17 +15,12 @@ header {
   justify-content: space-between;
 }
 
-i {
-  color: #fff;
-}
-
 .header-icons {
   display: flex;
   gap: 14px;
 }
 
 .header-icons a:hover i {
-  color: #d34040;
   animation: translateY 0.8s infinite alternate;
 }
 
@@ -38,17 +33,12 @@ i {
   }
 }
 .header-button {
-  border: 1px solid #fff;
+  border-width: 1px;
+  border-style: solid;
   padding: 8px 24px;
   border-radius: 4px;
-  color: #fff;
   background: transparent;
-  transition: background 0.8s;
-}
-
-.header-button:hover {
-  border: 1px solid #d34040;
-  background: #d34040;
+  transition: all 0.6s ease-in-out !important;
 }
 
 .header-logo {
@@ -120,7 +110,51 @@ i {
   text-align: center;
   margin: 14px 0;
 }
+.introduction .down-icon {
+  position: relative;
+  min-height: 80px;
+  min-width: 100%;
+  overflow: hidden;
+  margin: 30px 0 0 0;
+}
+.introduction .down-icon i {
+  position: absolute;
+  font-size: 4rem;
+}
+.introduction .down-icon .angles-top {
+  opacity: 0.3;
+  animation: bounce-icon-top 2.3s normal infinite;
+  z-index: -1;
+}
+.introduction .down-icon .angles-bottom {
+  animation: bounce-icon-bottom 2.3s normal infinite;
+  z-index: 1;
+}
 
+@keyframes bounce-icon-top {
+  from {
+    left: 50%;
+    top: -180%;
+    transform: translate(-50%, 0%);
+  }
+  to {
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0%);
+  }
+}
+@keyframes bounce-icon-bottom {
+  from {
+    left: 50%;
+    top: -90%;
+    transform: translate(-50%, 0%);
+  }
+  to {
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0%);
+  }
+}
 .button-contact {
   padding: 14px 28px;
   border: 0;
@@ -272,12 +306,13 @@ i {
   justify-content: center;
   padding: 54px 0;
   gap: 24px;
-  color: #fff;
 }
 .footer .footer-icons {
   display: flex;
-  gap: 8px;
-  color: #fff;
+  gap: 18px;
+}
+.footer .footer-icons a i {
+  transition: all 0.6s ease-in-out;
 }
 .footer .button-whatsapp {
   position: fixed;
@@ -322,6 +357,20 @@ html[data-theme=light] body {
 html[data-theme=dark] body {
   background: #040f1a;
 }
+html[data-theme=dark] .header-icons i {
+  color: #fff;
+}
+html[data-theme=dark] .header-icons a:hover i {
+  color: #d34040;
+}
+html[data-theme=dark] .header-button {
+  border-color: #fefbff;
+  color: #fefbff;
+}
+html[data-theme=dark] .header-button:hover {
+  border-color: #d34040;
+  background: #d34040;
+}
 html[data-theme=dark] .bg-home::before {
   background-image: linear-gradient(to bottom, #06090c, rgba(253, 253, 253, 0.1));
 }
@@ -357,6 +406,15 @@ html[data-theme=dark] .haircuts .haircut .haircut-info {
 html[data-theme=dark] .haircuts .haircut .haircut-info button {
   background: #d94140;
   color: #fff;
+}
+html[data-theme=dark] .footer {
+  color: #fff;
+}
+html[data-theme=dark] .footer .footer-icons i {
+  color: #fff;
+}
+html[data-theme=dark] .footer .footer-icons a:hover i {
+  color: #d94140;
 }
 
 body {
