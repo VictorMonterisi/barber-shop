@@ -103,7 +103,6 @@ i {
 }
 
 .introduction {
-  color: #fff;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -124,8 +123,6 @@ i {
 
 .button-contact {
   padding: 14px 28px;
-  color: #fff;
-  background: #d94140;
   border: 0;
   font-size: 18px;
   font-weight: 800;
@@ -144,31 +141,8 @@ i {
     transform: scale(1.07);
   }
 }
-@media screen and (max-width: 800px) {
-  .introduction {
-    min-height: 60vh;
-  }
-  .introduction h1 {
-    font-size: 34px;
-    padding: 0 14px;
-    width: 100%;
-  }
-  .introduction p {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .introduction h1 {
-    font-size: 24px;
-  }
-  .introduction p {
-    font-size: 12px;
-  }
-}
 .about {
-  background: #06121e;
   overflow: hidden;
-  color: #fff;
 }
 
 .about-content {
@@ -192,24 +166,14 @@ i {
   margin-bottom: 14px;
   line-height: 150%;
 }
-.about-content .about-description p strong {
-  color: #d94140;
-}
 
-@media screen and (max-width: 800px) {
-  .about-content {
-    flex-direction: column;
-  }
-}
 .services,
 .map {
-  background: #fff;
-  color: #232224;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 54px 14px;
+  padding: 54px 0 0 0;
 }
 
 .services-content h2,
@@ -229,7 +193,7 @@ i {
 .services-content iframe,
 .map iframe {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   border: unset;
 }
 
@@ -244,7 +208,6 @@ i {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: #fff;
   border-radius: 8px;
   box-shadow: 0 -1px 17px -4px rgba(0, 0, 0, 0.45);
   overflow: hidden;
@@ -263,19 +226,38 @@ i {
   display: flex;
   justify-content: space-between;
   padding: 14px;
-  background: #fff;
   z-index: 2;
 }
 .haircuts .haircut .haircut-info button {
-  background: #d94140;
-  color: #fff;
   padding: 4px 8px;
   border-radius: 4px;
   border: 0;
   cursor: default;
 }
 
+@media screen and (max-width: 480px) {
+  .introduction h1 {
+    font-size: 24px;
+  }
+  .introduction p {
+    font-size: 12px;
+  }
+}
 @media screen and (max-width: 800px) {
+  .introduction {
+    min-height: 60vh;
+  }
+  .introduction h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .introduction p {
+    font-size: 14px;
+  }
+  .about-content {
+    flex-direction: column;
+  }
   .haircuts {
     flex-direction: column;
   }
@@ -334,16 +316,47 @@ i {
     max-width: 64px;
   }
 }
-html[data-theme=default] body {
-  background: #06121e;
-}
-
 html[data-theme=light] body {
   background: #0c2135;
 }
-
 html[data-theme=dark] body {
   background: #040f1a;
+}
+html[data-theme=dark] .bg-home::before {
+  background-image: linear-gradient(to bottom, #06090c, rgba(253, 253, 253, 0.1));
+}
+html[data-theme=dark] .introduction {
+  color: #fff;
+}
+html[data-theme=dark] .button-contact {
+  background: #d94140;
+  color: #fff;
+}
+html[data-theme=dark] .about {
+  background: #fefbff;
+  color: #161617;
+}
+html[data-theme=dark] .about-description p strong {
+  color: #d94140;
+}
+html[data-theme=dark] .services,
+html[data-theme=dark] .map {
+  background: #b42b2b;
+  color: #edeaef;
+}
+html[data-theme=dark] .services strong,
+html[data-theme=dark] .map strong {
+  color: #040f1a;
+}
+html[data-theme=dark] .haircuts .haircut {
+  background: #fff;
+}
+html[data-theme=dark] .haircuts .haircut .haircut-info {
+  background: #fff;
+}
+html[data-theme=dark] .haircuts .haircut .haircut-info button {
+  background: #d94140;
+  color: #fff;
 }
 
 body {

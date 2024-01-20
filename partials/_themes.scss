@@ -1,22 +1,73 @@
 $themes: (
-    default: (
-        bg: $primary-normal,
-        bg-image: linear-gradient(to bottom, rgba(6,18,30,0.1), $primary-normal),  url("./assets/bg.svg")
-    ),
     light: (
         bg: $primary-light,
-        bg-image: linear-gradient(to bottom, rgba(6,18,30,0.1), $primary-light), url("./assets/bg.svg")
+        bg-image: linear-gradient(to bottom, rgba(6,18,30,0.1), $primary-light)
     ),
     dark: (
         bg: $primary-dark,
-        bg-image: linear-gradient(to bottom, rgba(6,18,30,0.1), $primary-dark), url("./assets/bg.svg")
+        bg-home: linear-gradient(to bottom, $secundary-dark, rgb(253 253 253 / 10%)),
+        introduction-text: $white-normal,
+        button-contact-bg: $red-normal,
+        button-contact-text: $white-normal,
+        about-bg: $white-light,
+        about-text: $black-dark,
+        about-strong: $red-normal,
+        services-map-bg: $red-dark,
+        services-map-text: $white-dark,
+        services-map-strong: $primary-dark,
+        haircut-bg: $white-normal,
+        haircut-info-bg: $white-normal,
+        haircut-info-button-bg: $red-normal,
+        haircut-info-button-text: $white-normal
     )
 );
 
 @each $theme, $settings in $themes {
     html[data-theme='#{$theme}'] {
+        body {
+            background: map-get($settings, bg);
+        }
         .bg-home::before {
-            background-image: map-get($settings, bg-image);
+            background-image: map-get($settings, bg-home);
+        }
+        .introduction {
+            color: map-get($settings, introduction-text);
+        }
+        .button-contact {
+            background: map-get($settings, button-contact-bg);
+            color: map-get($settings, button-contact-text);
+        }
+        .about {
+            background: map-get($settings, about-bg);
+            color: map-get($settings, about-text);
+        }
+        .about-description {
+            p {
+                strong {
+                    color: map-get($settings, about-strong);
+                }
+            }
+        }
+        .services,
+        .map {
+            background: map-get($settings, services-map-bg);
+            color: map-get($settings, services-map-text);
+            strong {
+                color: map-get($settings, services-map-strong);
+            }
+        }
+
+        .haircuts {
+            .haircut {
+                background: map-get($settings, haircut-bg);
+                .haircut-info {
+                    background: map-get($settings, haircut-info-bg);
+                    button {
+                        background: map-get($settings, haircut-info-button-bg);
+                        color: map-get($settings, haircut-info-button-text);
+                    }
+                }
+            }
         }
     }
 }
