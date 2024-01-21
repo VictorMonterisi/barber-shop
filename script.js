@@ -9,7 +9,19 @@ window.addEventListener("load", function(event){
 
 function toggleTheme(theme) {
     const htmlElement = document.documentElement;
+    const logos = document.querySelectorAll('.logo');
+
     htmlElement.setAttribute('data-theme', theme);
+
+    logos.forEach((logo) => {
+        if (htmlElement.getAttribute('data-theme') == 'dark') {
+            logo.src = 'assets/logo-light.svg';
+        } else if (htmlElement.getAttribute('data-theme') == 'light') {
+            logo.src = 'assets/logo-dark.svg';
+        } else {
+            console.log('error');
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
