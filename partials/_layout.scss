@@ -23,6 +23,30 @@
     opacity: 0.9;
 }
 
+.bg-home {
+    .theme-buttons {
+        position: absolute;
+        top: 25px;
+        right: 30px;
+    }
+
+    button {
+        border: unset;
+        font-size: 17px;
+        margin: 0px 3px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .button-light {
+        border-radius: 50px 0 0 50px;
+        padding: 4px 9px 3px 4px;
+    }
+    .button-dark {
+        border-radius: 0 50px 50px 0;
+        padding: 4px 4px 3px 9px;
+    }
+}
+
 // Introduction's style
 
 .introduction {

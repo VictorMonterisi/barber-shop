@@ -92,6 +92,26 @@ header {
   opacity: 0.9;
 }
 
+.bg-home .theme-buttons {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+.bg-home button {
+  border: unset;
+  font-size: 17px;
+  margin: 0px 3px;
+  transition: all 0.3s ease-in-out;
+}
+.bg-home .button-light {
+  border-radius: 50px 0 0 50px;
+  padding: 4px 9px 3px 4px;
+}
+.bg-home .button-dark {
+  border-radius: 0 50px 50px 0;
+  padding: 4px 4px 3px 9px;
+}
+
 .introduction {
   min-height: 80vh;
   display: flex;
@@ -368,6 +388,16 @@ html[data-theme=light] .header-button:hover {
   border-color: #d34040;
   background: #d34040;
 }
+html[data-theme=light] .bg-home .button-light {
+  background: #353436;
+  color: #fefbff;
+  opacity: 0.3;
+}
+html[data-theme=light] .bg-home .button-dark {
+  background: #d34040;
+  color: #161617;
+  opacity: 1;
+}
 html[data-theme=light] .bg-home::before {
   background-image: linear-gradient(to bottom, #edeaef, rgba(12, 33, 53, 0.2));
 }
@@ -430,6 +460,16 @@ html[data-theme=dark] .header-button {
 html[data-theme=dark] .header-button:hover {
   border-color: #d34040;
   background: #d34040;
+}
+html[data-theme=dark] .bg-home .button-light {
+  background: #d34040;
+  color: #161617;
+  opacity: 1;
+}
+html[data-theme=dark] .bg-home .button-dark {
+  background: #353436;
+  color: #fefbff;
+  opacity: 0.3;
 }
 html[data-theme=dark] .bg-home::before {
   background-image: linear-gradient(to bottom, #06090c, rgba(253, 253, 253, 0.1));

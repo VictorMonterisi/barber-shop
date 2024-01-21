@@ -8,6 +8,12 @@ $themes: (
         header-button-border-hover: $red-light,
         header-button-bg-hover: $red-light,
         bg-home: linear-gradient(to bottom, $white-dark, rgb(12 33 53 / 20%)),
+        button-light-bg: $black-light,
+        button-dark-bg: $red-light,
+        button-light-text: $white-light,
+        button-dark-text: $black-dark,
+        button-light-opacity: 0.3,
+        button-dark-opacity: 1,
         introduction-text: $black-dark,
         button-contact-bg: $red-normal,
         button-contact-text: $white-normal,
@@ -34,6 +40,12 @@ $themes: (
         header-button-border-hover: $red-light,
         header-button-bg-hover: $red-light,
         bg-home: linear-gradient(to bottom, $secundary-dark, rgb(253 253 253 / 10%)),
+        button-light-bg: $red-light,
+        button-dark-bg: $black-light,
+        button-light-text: $black-dark,
+        button-dark-text: $white-light,
+        button-light-opacity: 1,
+        button-dark-opacity: 0.3,
         introduction-text: $white-normal,
         button-contact-bg: $red-normal,
         button-contact-text: $white-normal,
@@ -75,6 +87,18 @@ $themes: (
         .header-button:hover {
             border-color: map-get($settings, header-button-border-hover);
             background: map-get($settings, header-button-bg-hover);
+        }
+        .bg-home {
+            .button-light  {
+                background: map-get($settings, button-light-bg);
+                color: map-get($settings, button-light-text);
+                opacity: map-get($settings, button-light-opacity);
+            }
+            .button-dark {
+                background: map-get($settings, button-dark-bg);
+                color: map-get($settings, button-dark-text);
+                opacity: map-get($settings, button-dark-opacity);
+            }
         }
         .bg-home::before {
             background-image: map-get($settings, bg-home);
