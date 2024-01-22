@@ -517,6 +517,65 @@ html[data-theme=dark] .footer .footer-icons a:hover i {
   color: #d94140;
 }
 
+.modal-promo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+.modal-promo .modal-promo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 75%;
+  transform: translate(-50%, -50%);
+  background: #edeaef;
+  color: #0c2135;
+}
+.modal-promo .modal-promo-content img {
+  max-width: 20%;
+  margin: 0 auto;
+}
+.modal-promo .modal-promo-content h2,
+.modal-promo .modal-promo-content h3 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.modal-promo .modal-promo-content i.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.modal-promo .modal-promo-content p {
+  font-size: 1rem;
+  line-height: 180%;
+  text-align: center;
+  margin: 15px auto;
+}
+.modal-promo .modal-promo-content p span {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0c2135;
+}
+.modal-promo .modal-promo-content .button-promo {
+  background: #d34040;
+  font-weight: bold;
+  color: #161617;
+  padding: 15px 20px;
+  transition: all 0.3s ease-in-out;
+}
+.modal-promo .modal-promo-content .button-promo:hover {
+  background: #353436;
+  color: #edeaef;
+}
+
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
