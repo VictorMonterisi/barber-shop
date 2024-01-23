@@ -34,3 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+window.addEventListener("load", function(event){
+    const promo = document.querySelector('.promo');
+
+    setTimeout(() => {
+        promo.style.left = '25px';
+    }, 5000);
+});

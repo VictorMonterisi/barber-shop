@@ -1,0 +1,19 @@
+.promo {
+  position: fixed;
+  left: -200px;
+  bottom: 25px;
+  transition: 2.3s ease-in-out;
+}
+.promo a img {
+  max-width: 15%;
+  animation: gift 1.7s alternate infinite;
+}
+
+@keyframes gift {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(40deg);
+  }
+}/*# sourceMappingURL=promo.css.map */

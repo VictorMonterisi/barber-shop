@@ -1,0 +1,25 @@
+.promo {
+    position: fixed;
+    left: -200px;
+    bottom: 25px;
+    transition: 2.3s ease-in-out;
+
+    a {
+        img {
+            max-width: 15%;
+            animation: gift 1.7s alternate infinite;
+        }
+    }
+}
+
+@keyframes gift {
+    from {
+        transform: rotate(0deg);
+        filter: drop-shadow(0px 0px 20px $white-light);
+    }
+
+    to {
+        transform: rotate(40deg);
+        filter: drop-shadow(0px 0px 30px $white-light);
+    }
+}
