@@ -11,7 +11,7 @@ $themes: (
         button-light-bg: $black-light,
         button-dark-bg: $red-light,
         button-light-text: $white-light,
-        button-dark-text: $black-dark,
+        button-dark-text: $white-dark,
         button-light-opacity: 0.3,
         button-dark-opacity: 1,
         introduction-text: $black-dark,
@@ -27,6 +27,12 @@ $themes: (
         haircut-info-bg: $white-normal,
         haircut-info-button-bg: $red-normal,
         haircut-info-button-text: $white-normal,
+
+        dp-shadow: drop-shadow(0px 0px 1px $white-light),
+        span-promo-bg: $black-normal,
+        span-promo-text: $white-light,
+        span-before: 7px solid $black-normal,
+
         footer-text: $primary-dark,
         footer-icons: $red-dark,
         footer-icons-hover: $primary-dark,
@@ -42,7 +48,7 @@ $themes: (
         bg-home: linear-gradient(to bottom, $secundary-dark, rgb(253 253 253 / 10%)),
         button-light-bg: $red-light,
         button-dark-bg: $black-light,
-        button-light-text: $black-dark,
+        button-light-text: $white-dark,
         button-dark-text: $white-light,
         button-light-opacity: 1,
         button-dark-opacity: 0.3,
@@ -59,6 +65,10 @@ $themes: (
         haircut-info-bg: $white-normal,
         haircut-info-button-bg: $red-normal,
         haircut-info-button-text: $white-normal,
+        dp-shadow: drop-shadow(0px 0px 1px $white-light),
+        span-promo-bg: $black-normal,
+        span-promo-text: $white-light,
+        span-before: 7px solid $black-normal,
         footer-text: $white-normal,
         footer-icons: $white-normal,
         footer-icons-hover: $red-normal
@@ -138,6 +148,23 @@ $themes: (
                         background: map-get($settings, haircut-info-button-bg);
                         color: map-get($settings, haircut-info-button-text);
                     }
+                }
+            }
+        }
+        .promo {
+            a {
+                img {
+                    filter: map-get($settings, dp-shadow);
+                }
+        
+                span {
+                    background: map-get($settings, span-promo-bg);
+                    color: map-get($settings, span-promo-text);
+                    filter: map-get($settings, dp-shadow);
+                }
+        
+                span::before {
+                    border-right: map-get($settings, span-before);
                 }
             }
         }

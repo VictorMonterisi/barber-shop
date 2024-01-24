@@ -3,11 +3,35 @@
     left: -200px;
     bottom: 25px;
     transition: 2.3s ease-in-out;
+    z-index: 3;
 
     a {
         img {
             max-width: 15%;
             animation: gift 1.7s alternate infinite;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            opacity: 0;
+            font-size: 14px;
+            padding: 3px 5px;
+            border-radius: 3px;
+            transform: translate(0, -50%);
+            transition: 1.3s ease-in-out;
+            z-index: -1;
+        }
+
+        span::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -7px;
+            transform: translate(0, -50%);
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent; 
         }
     }
 }
@@ -15,11 +39,9 @@
 @keyframes gift {
     from {
         transform: rotate(0deg);
-        filter: drop-shadow(0px 0px 20px $white-light);
     }
 
     to {
         transform: rotate(40deg);
-        filter: drop-shadow(0px 0px 30px $white-light);
     }
 }
