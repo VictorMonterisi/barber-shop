@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,22 +20,30 @@
 
     <title>Dev Ficar Bonito - Sua Barberia</title>
 </head>
-<body>
-    
-    <footer class="footer">
-        <div class="footer-icons">
-            <a href="javascript:void(0)" title="Instagram"><i class="fa-brands fa-instagram fa-2x"></i></a>
-            <a href="javascript:void(0)" title="Facebook"><i class="fa-brands fa-facebook fa-2x"></i></a>
-            <a href="javascript:void(0)" title="TikTok"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+<body class="container">
+    <header class="lp-header">
+        <div class="lp-header-logo" data-aos="fade-up" data-aos-delay="300">
+            <img class="logo" src="assets/logo-light.svg" alt="Logo da Barbearia" data-aos="flip-up" data-aos-delay="400" data-aos-duration="1500" />
         </div>
-        <div>
-            <img class="logo" src="assets/logo-light.svg" alt="Logo Barbearia">
-        </div>
+    </header>
+    <main class="lp-principal">
+        <form>
+            <label for=""></label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome">
+            <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx">
+            <input type="email" name="email" id="email" placeholder="mail@email.com">
+            <select name="onde_conheceu" id="onde_conhceu">
+                <option value="">Selecione</option>
+                <option value="instagram">Instagram</option>
+                <option value="twitter">Twitter</option>
+                <option value="google">Google</option>
+                <option value="indicacao">Indicação</option>
+                <option value="outro">Outro</option>
+            </select>
+        </form>
+    </main>
+    <footer class="lp-footer">
         <p class="copyright"></p>
-        <a href="javascript:void(0)" class="button-whatsapp" target="_blank" title="Agende o seu horário" data-aos="zoom-in-up" data-aos-delay="400">
-            <img src="assets/whatssapp.svg" alt="Botão WhatsApp" />
-            <span class="tooltip-text">Agende o seu horário</span>
-        </a>
     </footer>
 
 

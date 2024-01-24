@@ -581,6 +581,24 @@ html[data-theme=dark] .footer .footer-icons a:hover i {
   }
 }
 body {
+  background: url("./assets/bg.svg") no-repeat;
+  background-size: cover;
+}
+
+.lp-header {
+  width: 100%;
+}
+.lp-header .lp-header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 14px;
+}
+.lp-header .lp-header-logo .logo {
+  max-width: 5%;
+}
+
+body {
   font-family: "Sora", sans-serif;
   width: 100%;
   height: 100vh;
