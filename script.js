@@ -1,6 +1,6 @@
 AOS.init();
 
-window.addEventListener("load", function(event){
+window.addEventListener("load", (event) => {
     let data = new Date();
     let anoAtual = data.getFullYear();
     var copyright = document.querySelector(".copyright");
@@ -29,7 +29,7 @@ function toggleTheme(theme) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const themeButtons = document.querySelectorAll('.theme-button');
 
     themeButtons.forEach(button => {
@@ -40,21 +40,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-window.addEventListener("load", function(event){
+window.addEventListener("load", (event) => {
     const promo = document.querySelector('.promo');
     const convite = document.querySelector('.convite');
+    const larguraDaTela = this.window.innerWidth;
 
     setTimeout(() => {
         promo.style.left = '25px';
     }, 5000);
 
-    setTimeout(() => {
-        convite.style.left = '150px';
-        convite.style.opacity = '1';
-    }, 8000);
+    if(larguraDaTela > 800) {
+
+        setTimeout(() => {
+            convite.style.left = '150px';
+            convite.style.opacity = '1';
+        }, 8000);
+
+    } else if (larguraDaTela > 425 && larguraDaTela < 800) {
+        setTimeout(() => {
+            convite.style.left = '115px';
+            convite.style.opacity = '1';
+        }, 8000);
+    } else if (larguraDaTela < 340) {
+        setTimeout(() => {
+            convite.style.left = '45px';
+            convite.style.opacity = '1';
+        }, 8000);
+    }
 
     setTimeout(() => {
         convite.style.left = '0';
         convite.style.opacity = '0';
     }, 16000);
+
 });
