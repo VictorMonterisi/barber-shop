@@ -13,6 +13,9 @@ body {
     align-items: center;
     margin: 15px auto;
 
+    section {
+        padding: 15px;
+    }
 
     form {
         display: flex;
@@ -28,10 +31,6 @@ body {
         select {
             height: 2.1rem;
         }
-    }
-
-    section {
-        padding: 15px;
     }
 }
 

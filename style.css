@@ -637,6 +637,9 @@ body {
   align-items: center;
   margin: 15px auto;
 }
+.lp-principal section {
+  padding: 15px;
+}
 .lp-principal form {
   display: flex;
   flex-direction: column;
@@ -650,9 +653,6 @@ body {
 .lp-principal form input,
 .lp-principal form select {
   height: 2.1rem;
-}
-.lp-principal section {
-  padding: 15px;
 }
 
 .lp-header {
