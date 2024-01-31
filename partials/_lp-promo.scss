@@ -1,11 +1,45 @@
 body {
+    position: relative;
     background: url('./assets/bg.svg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
+.lp-principal {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px auto;
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 60vh;
+        background: $primary-light;
+        color: $white-normal;
+        border-radius: 15px;
+        padding: 15px;
+
+        input,
+        select {
+            height: 2.1rem;
+        }
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+
+
 .lp-header {
     width: 100%;
+    text-align: center;
 
     .lp-header-logo {
         display: flex;

@@ -262,6 +262,7 @@
 }
 
 @media screen and (max-width: 800px) {
+
     .introduction {
         min-height: 60vh;
         
@@ -287,5 +288,30 @@
                 max-width: 740px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .bg-home {
+        .theme-buttons {
+            top: 40px;
+            right: -10px;
+            transform: rotate(90deg);
+        }
+    
+        .button-light i,
+        .button-dark i {
+            transform: rotate(-90deg);
+        }
+    }
+
+    .introduction {
+        
+        h1 {
+            font-size: 30px;
+            padding: 0 14px;
+        }
+
     }
 }
