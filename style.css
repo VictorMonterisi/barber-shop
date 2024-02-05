@@ -631,49 +631,17 @@ body {
 
 .lp-principal {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin: 15px auto;
-}
-.lp-principal section {
-  padding: 15px;
-}
-.lp-principal form {
-  display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
-  height: 60vh;
-  background: #0c2135;
-  color: #fff;
-  border-radius: 15px;
-  padding: 15px;
-}
-.lp-principal form input,
-.lp-principal form select {
-  height: 2.1rem;
-}
-
-.lp-header {
-  width: 100%;
-  text-align: center;
-}
-.lp-header .lp-header-logo {
-  display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 14px;
-}
-.lp-header .lp-header-logo .logo {
-  max-width: 5%;
-}
-
-.lp-principal {
   background: rgba(4, 15, 26, 0.5);
-  width: 100%;
+  width: 90%;
   padding: 45px 0;
   margin: 15px auto;
+}
+.lp-principal .logo {
+  max-width: 14%;
+  margin: 0 auto 15px auto;
 }
 .lp-principal section {
   position: relative;
@@ -683,7 +651,7 @@ body {
   justify-content: space-between;
   width: 60vw;
   margin: 0 auto;
-  padding: 0 30px 40px 30px;
+  padding: 0 15px;
 }
 .lp-principal section h1,
 .lp-principal section h2 {
@@ -691,18 +659,18 @@ body {
 }
 .lp-principal section h1 {
   filter: drop-shadow(1px 2px 1px #040f1a);
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #fff;
 }
 .lp-principal section h2 {
   filter: drop-shadow(1px 2px 1px #06121e);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #d94140;
   margin: 14px 0;
 }
 .lp-principal section p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
   line-height: 150%;
   margin: 0 0 7px 0;
@@ -714,19 +682,6 @@ body {
 }
 .lp-principal section p a:hover {
   color: #d34040;
-}
-.lp-principal .botao {
-  border: unset;
-  background: #d94140;
-  font-size: 1rem;
-  color: #fefbff;
-  padding: 15px 30px;
-  margin: 15px auto;
-  transition: all 0.3s ease-in-out;
-}
-.lp-principal .botao:hover {
-  background: #fefbff;
-  color: #232224;
 }
 .lp-principal form {
   display: flex;
@@ -763,6 +718,19 @@ body {
   margin: 0 0 3px 0;
   border-radius: unset;
 }
+.lp-principal form .botao {
+  border: unset;
+  background: #d94140;
+  font-size: 1rem;
+  color: #fefbff;
+  padding: 15px 30px;
+  margin: 15px auto;
+  transition: all 0.3s ease-in-out;
+}
+.lp-principal form .botao:hover {
+  background: #fefbff;
+  color: #232224;
+}
 
 .lp-footer {
   display: flex;
@@ -773,9 +741,21 @@ body {
   text-align: center;
   color: #fff;
   padding: 15px 0;
-  margin: 30px 0 0 0;
+  margin: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .lp-principal {
+    flex-direction: column;
+  }
+  .lp-principal .logo {
+    max-width: 25%;
+    margin: 0 auto 15px auto;
+  }
+  .lp-principal form {
+    margin-top: 10px;
+  }
+}
 body {
   font-family: "Sora", sans-serif;
   width: 100%;

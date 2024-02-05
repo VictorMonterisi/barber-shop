@@ -7,56 +7,18 @@ body {
 
 .lp-principal {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 15px auto;
-
-    section {
-        padding: 15px;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 60vh;
-        background: $primary-light;
-        color: $white-normal;
-        border-radius: 15px;
-        padding: 15px;
-
-        input,
-        select {
-            height: 2.1rem;
-        }
-    }
-}
-
-
-
-.lp-header {
-    width: 100%;
-    text-align: center;
-
-    .lp-header-logo {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 14px;
-
-        .logo {
-            max-width: 5%;
-        }
-    }
-}
-
-.lp-principal {
     background: rgba($color: $primary-dark, $alpha: .5);
-    width: 100%;
+    width: 90%;
     padding: 45px 0;
     margin: 15px auto;
+
+    .logo {
+        max-width: 14%;
+        margin: 0 auto 15px auto;
+    }
 
     section {
         position: relative;
@@ -66,7 +28,7 @@ body {
         justify-content: space-between;
         width: 60vw;
         margin: 0 auto;
-        padding: 0 30px 40px 30px;
+        padding: 0 15px ;
 
         h1,
         h2 {
@@ -75,20 +37,20 @@ body {
 
         h1 {
             filter: drop-shadow(1px 2px 1px $primary-dark);
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             font-weight: bold;
             color: $white-normal;
         }
 
         h2 {
             filter: drop-shadow(1px 2px 1px $primary-normal);
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: $red-normal;
             margin: 14px 0;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: $white-normal;
             line-height: 150%;;
             margin: 0 0 7px 0;
@@ -104,21 +66,6 @@ body {
                 color: $red-light;
             }
         }
-    }
-
-    .botao {
-        border: unset;
-        background: $red-normal;
-        font-size: 1rem;
-        color: $white-light;
-        padding: 15px 30px;
-        margin: 15px auto;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .botao:hover {
-        background: $white-light;
-        color: $black-normal;
     }
 
     form {
@@ -157,6 +104,21 @@ body {
             border-radius: unset;
         }
 
+        .botao {
+            border: unset;
+            background: $red-normal;
+            font-size: 1rem;
+            color: $white-light;
+            padding: 15px 30px;
+            margin: 15px auto;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .botao:hover {
+            background: $white-light;
+            color: $black-normal;
+        }
+
     }
 }
 
@@ -169,5 +131,20 @@ body {
     text-align: center;
     color: $white-normal;
     padding: 15px 0;
-    margin: 30px 0 0 0;
+    margin: 0;
+    //margin: 30px 0 0 0;
+}
+
+@media screen and (max-width: 800px) {
+    .lp-principal {
+        flex-direction: column;
+        .logo {
+            max-width: 25%;
+            margin: 0 auto 15px auto;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+    }
 }
